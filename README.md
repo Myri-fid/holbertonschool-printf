@@ -1,3 +1,4 @@
+
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=27&pause=1000&center=true&width=700&height=62&lines=Project+Printf)](https://git.io/typing-svg)
 
 
@@ -26,22 +27,22 @@ It tells the compiler what type of data is in the varaible when printing using p
 
 Printf is a function that writes output to the stdout, which is the standard output stream. Also, the function writes the output according to the format string. This format string specifies how the following arguments are converted for output.
 
-The conversion specifiers used in this project are:
+### The conversion specifiers used in this project are:
 
     1. %c: Prints a single character.
     2. %s: Prints a string of characters.
     3. %d: Prints integers.
     4. %i: Prints integers.
-    5. %r: Prints a reversed string
+    5. % : Prints a reversed string
 
 ## Requirements
 
-Compiled on Ubuntu 24.04.1 LTS
-Programs and functions will be compiled with gcc using the flags -Wall -Wextra - pedantic -std=gnu89 -Wno-Format
-Followed by Betty style
-No use of global variables
-No more than 5 functions per file
-Function prototypes are in the header file main.h
+    . Compiled on Ubuntu 24.04.1 LTS
+    . Programs and functions will be compiled with gcc using the flags -Wall -Wextra - pedantic -std=gnu89 -Wno-Format
+    . Followed by Betty style 
+    . No use of global variables
+    . No more than 5 functions per file
+    . Function prototypes are in the header file main.h
 
 ## Graphique
 
