@@ -20,7 +20,16 @@ Printf is a function that writes output to the stdout, which is the standard out
 ### The conversion specifiers used in this project are:
 
 | Symbol || Meaning|
-| :-------- | :------- | -|
+| :-------- | :------- | :-------------------------------- |
+| `%c`      |  **Print a single character** |
+| `%s`      |  **Print a string of characters** |
+| `%%`      |  **Print a percent sign.** |
+| `%d`      |  **Print a decimal (base 10) number** |
+| `%i`      |  **Print an integer in base 10** |
+
+
+| Symbol ||Meaning|
+| :-------- | :------- | :-------------------------------- |
 | **%c**    |  *Print a single character** |
 | **%s**    |  *Print a string of characters** |
 | **%%**    |  *Print a percent sign.** |
@@ -78,3 +87,13 @@ int main(void)
 Bonjour, je m'appelle Brian et j'ai 25 ans.
 ```
 
+## The conversion specifiers used in this project are:
+
+
+| Specifiers || Description|
+| :-------- | :------- | :-------------------------------- |
+| `%c`      |  **Print a single character** |
+| `%s`      |  **Print a string of characters** |
+| `%%`      |  **Print a percent sign.** |
+| `%d`      |  **Print a decimal (base 10) number** |
+| `%i`      |  **Print an integer in base 10** |
