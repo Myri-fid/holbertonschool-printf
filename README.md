@@ -26,23 +26,13 @@ Printf is a function that writes output to the stdout, which is the standard out
 #### %i -- Print an integer in base 10 --
 
 
-
-| Symbol || Meaning |
-| :----- |- :-------|
-| **%c**    |  **Print a single character** |
-| `%s`      |  **Print a string of characters** |
-| `%%`      |  **Print a percent sign.** |
-| `%d`      |  **Print a decimal (base 10) number** |
-| `%i`      |  **Print an integer in base 10** |
-
-
-| Symbol || Meaning |
-| :----- |- :------- |
-| **%c**   |  *Print a single character** |
-| **%s**   |  *Print a string of characters** |
-| **%%**   |  *Print a percent sign.** |
-| **%d**   |  *Print a decimal (base 10) number** |
-| **%i**   |  *Print an integer in base 10** |
+| Symbol    | Meaning |
+| :-------- | :------------------------------------ |
+| **%c**    |  *Print a single character**          |
+| **%s**    |  *Print a string of characters**      |
+| **%%**    |  *Print a percent sign.**             |
+| **%d**    |  *Print a decimal (base 10) number**  |
+| **%i**    |  *Print an integer in base 10**       |
 
 
 ## Requirements
