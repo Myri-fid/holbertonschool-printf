@@ -20,12 +20,12 @@ Printf is a function that writes output to the stdout, which is the standard out
 ### The conversion specifiers used in this project are:
 
 | Symbol || Meaning|
-| :-------- | :------- | :-------------------------------- |
-| **%c**      |  *Print a single character** |
-| **%s**      |  *Print a string of characters** |
-| **%%**      |  *Print a percent sign.** |
-| **%d**      |  *Print a decimal (base 10) number** |
-| **%i**      |  *Print an integer in base 10** |
+| :-------- | :------- | -|
+| **%c**    |  *Print a single character** |
+| **%s**    |  *Print a string of characters** |
+| **%%**    |  *Print a percent sign.** |
+| **%d**    |  *Print a decimal (base 10) number** |
+| **%i**    |  *Print an integer in base 10** |
 
 
 ## Requirements
@@ -47,9 +47,9 @@ Printf is a function that writes output to the stdout, which is the standard out
 
 ![](https://flat-badgen.vercel.app/badge/icon/github?icon=github&label)
 
-- Myriam Guillabert [@Myri-fid](https://github.com/Myri-fid) // lien Git general
+- Myriam Guillabert [@Myri-fid](https://github.com/Myri-fid)
 
-- Ahmed Hmeyd [@Ahmed]()
+- Ahmed Hmeyd [@Ahmed](https://github.com/hmeyd)
 
 - David Tolza [@VidadTol](https://www.github.com/VidadTol)
 
@@ -61,23 +61,20 @@ man ./man_3_printf
 
 ### Input
 ```
-#include "main.h"
+#include <stdio.h> 
 
-int main(void)
-{
-        char *s = "January";
-        char c = 'H';
-        int i = 55;
+int main(void) 
+{ 
+        char name[] = "Brian";
+        int age = 25; 
 
-        _printf("My name is %carry I got %d and we are in %s\n", c, i, s);
+        _printf("Bonjour, je m'appelle %s et j'ai %d ans.\n", name, age);
 
-        return (0);
+        return 0; 
 }
 ```
-
 ### Output
 ```
-My name is Harry I've got 55 and we are in January
+Bonjour, je m'appelle Brian et j'ai 25 ans.
 ```
-
 
