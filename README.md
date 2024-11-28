@@ -19,14 +19,13 @@ Printf is a function that writes output to the stdout, which is the standard out
 
 ### The conversion specifiers used in this project are:
 
-
-| Symbol    | Meaning |
-| :-------- | :------------------------------------ |
-| **%c**    |  *Print a single character**          |
-| **%s**    |  *Print a string of characters**      |
-| **%%**    |  *Print a percent sign.**             |
-| **%d**    |  *Print a decimal (base 10) number**  |
-| **%i**    |  *Print an integer in base 10**       |
+| Specifiers | Description                               | 
+| :--------  | :---------------------------------------- |
+| `%c`       |  *Print a single character**             |
+| `%s`       |  *Print a string of characters**         |
+| `%%`       |  *Print a percent sign.**                |
+| `%d`       |  *Print a decimal (base 10) number**     |
+| `%i`       |  *Print an integer in base 10**          |
 
 
 ## Requirements
@@ -40,24 +39,14 @@ Printf is a function that writes output to the stdout, which is the standard out
 
 ## Flowchart
 
-![Diagramme de flux de la fonction printf](https://i.imgur.com/PifL3N1.png)
+![Diagramme printf](https://i.imgur.com/PifL3N1.png)
 
-
-## Project Collaborators
-
-![](https://flat-badgen.vercel.app/badge/icon/github?icon=github&label)
-
-- Myriam Guillabert [@Myri-fid](https://github.com/Myri-fid)
-
-- Ahmed Hmeyd [@Ahmed](https://github.com/hmeyd)
-
-- David Tolza [@VidadTol](https://www.github.com/VidadTol)
 
 ## Man page
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=27&pause=1000&center=true&width=500&height=62&lines=man.%2Fman_3_printf)](https://github.com/Myri-fid/holbertonschool-printf/blob/david/man_3_printf)
 
-## Running Tests
+## Practical Example:
 
 ### Input
 ```
@@ -77,4 +66,17 @@ int main(void)
 ```
 Hello, my name is Brian and I am 25 years old.
 ```
+
+## Project Collaborators
+
+![](https://flat-badgen.vercel.app/badge/icon/github?icon=github&label)
+
+- Myriam Guillabert [@Myri-fid](https://github.com/Myri-fid)
+
+- Ahmed Hmeyd [@Ahmed](https://github.com/hmeyd)
+
+- David Tolza [@VidadTol](https://www.github.com/VidadTol)
+
+
+
 
