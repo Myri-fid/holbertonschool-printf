@@ -58,15 +58,15 @@ int main(void)
         char name[] = "Brian";
         int age = 25; 
 
-        _printf("Bonjour, je m'appelle %s et j'ai %d ans.\n", name, age);
+        _printf("Hello, my name is %s and I am %d years old, and I'm not in the kitchen.\n", name, age);
 
-        return 0; 
+        return 0;
 }
 
 .B This will Output:
 .PP
 .nf
-Bonjour, je m'appelle Brian et j'ai 25 ans.
+Hello, my name is Brian and I am 25 years old, and I'm not in the kitchen.
 
 .SH NOTES
 .PP
