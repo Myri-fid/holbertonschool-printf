@@ -39,9 +39,8 @@ Printf is a function that writes output to the stdout, which is the standard out
     . Function prototypes are in the header file main.h
 
 ## Flowchart
-- Diagramme de flux de la fonction printf
 
-![Diagramme de flux de la fonction printf](https://i.imgur.com/lX1fkb7.png)
+![Diagramme de flux de la fonction printf](https://i.imgur.com/PifL3N1.png)
 
 
 ## Project Collaborators
