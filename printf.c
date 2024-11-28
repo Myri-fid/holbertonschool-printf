@@ -1,50 +1,35 @@
 #include "main.h"
-#include <stdio.h>
 /**
- *_printf - print arguments
- *@format: format
- *Return: value
+ * _printf - Print arguments according to a format.
+ * @format: Format string containing the format specifiers.
+ * Return: The number of characters printed (excluding null byte).
  */
 int _printf(const char *format, ...)
 {
-	va_list args;
-	int count = 0;
-	const char *ptr;
+	unsigned int count = 0;
+	va_list args; /* Déclare une liste */
+	const char *ptr; /* Déclare pointeur pour parcourir la chaîne*/
 
-	va_start(args, format);
-	for (ptr = format; *ptr != '\0'; ptr++)
+	for (ptr = format; (*ptr != '\0'); ptr++)
 	{
-		if (*ptr == '%')
+		if (*ptr == '%') /* Vérifie si le caractère actuel est '%'*/
 		{
-			ptr++;
-			if (*ptr == 'c')
-			{
-				_putchar(va_arg(args, int));
-				count++; /*incrémente*/
-			}
-			else if (*ptr == 's')
-			{
-				char *str = va_arg(args, char *);
-
-				while (*str)
-				{
-					_putchar(*str);
-					str++;
-					count++;
-				}
-			}
-			else if (*ptr == '%')
+			if (*ptr == '%')
 			{
 				_putchar('%');
+			}
+			else
+			{
+				print_t(ptr);
 				count++;
 			}
+			ptr++; /*Passe au caractère suivant*/
 		}
 		else
 		{
-			_putchar(*ptr); /*affiche le caractere*/
-			count++; /*incrémente*/
+			_putchar(*ptr); /*caractère n'est pas '%'*/
+			count++; /*Incrémente le compteur*/
 		}
 	}
-	va_end(args);
 	return (count);
 }
