@@ -7,7 +7,8 @@
  */
 int _printf(const char *format, ...)
 {
-	int a = 0, b, c, m = 1;
+	int num, mul = 1, de_d, j = 1;
+	float num2, de_p;
 	va_list args; /* Déclare une liste pour les arguments variadiques*/
 	int count = 0; /* Initialise le compteur de caractères imprimés à 0*/
 	const char *ptr; /* Déclare un pointeur pour parcourir la chaîne format*/
@@ -37,38 +38,62 @@ int _printf(const char *format, ...)
 				_putchar('%'); /* Imprime le caractère '%'*/
 				count++; /*Incrémente le compteur*/
 			}
-			else if (*ptr == 'd' || *ptr == 'i')
+			else if (*ptr == 'i')
 			{
-				a = va_arg(args, int);
-				if (a < 0)
+				num = va_arg(args, int);
+				if (num < 0)
 				{
-				_putchar('-');
-				a = -1 * a;
+					_putchar('-');
+					num = -1 * num;
 				}
-				b = a;
-				c = a;
-				while (b > 9)
+				while (num / mul > 9)
 				{
-					m = m * 10;
-					b = b / 10;
+					mul = mul * 10;
 				}
-				while (m != 1)
+				while (mul != 1)
 				{
-					c = a;
-					c = (c / m) % 10 + 48;
-					_putchar (c);
-					m = m / 10;
+					_putchar ((num / mul) % 10 + '0');
+					mul = mul / 10;
 				}
-				_putchar(a % 10 + 48);
+				_putchar(num % 10 + '0');
 				count++ ;
 			}
-		}
-			else
+			else if (*ptr == 'd')
 			{
-				_putchar(*ptr); /*Imprime le caractère actuel qui n'est pas '%'*/
-				count++; /*Incrémente le compteur*/
+				num2 = va_arg(args, double);
+				mul = 1;
+				while ((int)num2 / mul > 9)
+				{
+					mul = mul * 10;
+				}
+				while (mul != 1)
+				{
+					_putchar (((int)num2 / mul) % 10 + '0');
+					mul = mul / 10;
+				}
+				_putchar((int)num2 % 10 + '0');
+				/*Afficher le point décimal*/
+				if ((num2 - (int)num2) != 0)
+				{
+					_putchar('.');
+					de_p = num2 - (int)num2;
+					while (j < 4)
+					{
+						de_p = 10 * de_p;
+						de_d = (int)de_p;
+						_putchar(de_d + '0');
+						de_p = de_p - de_d;
+						j++;
+					}
+				}
+				count++;
 			}
-
+		}
+		else
+		{
+			_putchar(*ptr); /*Imprime le caractère actuel qui n'est pas '%'*/
+			count++; /*Incrémente le compteur*/
+		}
 	}
-		return (39);
+	return (count);
 }
