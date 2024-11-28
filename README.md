@@ -55,9 +55,9 @@ Printf is a function that writes output to the stdout, which is the standard out
 - David Tolza [@VidadTol](https://www.github.com/VidadTol)
 
 ## Man page
-```
-man ./man_3_printf
-```
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=27&pause=1000&center=true&width=500&height=62&lines=man.%2Fman_3_printf)](https://github.com/Myri-fid/holbertonschool-printf/blob/david/man_3_printf)
+
 ## Running Tests
 
 ### Input
@@ -69,13 +69,13 @@ int main(void)
         char name[] = "Brian";
         int age = 25; 
 
-        _printf("Bonjour, je m'appelle %s et j'ai %d ans.\n", name, age);
+        _printf("Hello, my name is %s and I am %d years old.\n", name, age);
 
         return 0; 
 }
 ```
 ### Output
 ```
-Bonjour, je m'appelle Brian et j'ai 25 ans.
+Hello, my name is Brian and I am 25 years old.
 ```
 
