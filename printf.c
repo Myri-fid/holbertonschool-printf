@@ -6,9 +6,9 @@
  * @args: arguments
  * Return: The number of characters printed (excluding null byte).
  */
-void print_integer(va_list args)
+int print_integer(va_list args)
 {
-	int num, mul;
+	int num, mul, resultat = 0;
 
 	mul = 1;
 	num = va_arg(args, int);
@@ -25,8 +25,10 @@ void print_integer(va_list args)
 	{
 		_putchar ((num / mul) % 10 + '0');
 		mul = mul / 10;
+		resultat++;
 	}
 	_putchar(num % 10 + '0');
+	return (resultat);
 }
 
 /**
@@ -73,6 +75,7 @@ void print_double(va_list args)
  */
 int print_char_ptr(va_list args)
 {
+	int resultat = 0;
 	char *str = va_arg(args, char *);
 
 	if (str == NULL)
@@ -90,8 +93,9 @@ int print_char_ptr(va_list args)
 	{
 		_putchar(*str);
 		str++;
+		resultat++;
 	}
-	return (0);
+	return (resultat);
 }
 
 /**
@@ -114,17 +118,17 @@ int _printf(const char *format, ...)
 			if (*ptr == 'c')
 			{
 				_putchar(va_arg(args, int));
-				count++; /*Incrémente le compteur*/
+				count++;
 			}
 			else if (*ptr == '%') /*Vérifie si le spécificateur est '%'*/
 			{
 				_putchar('%'); /* Imprime le caractère '%'*/
-				count++; /*Incrémente le compteur*/
+				count++;
 			}
 			else if (*ptr == 's')
-				print_char_ptr(args);
+			count += print_char_ptr(args);
 			else if (*ptr == 'i' || *ptr == 'd')
-				print_integer(args);
+			count += print_integer(args);
 			else
 			{
 				_putchar('%');
@@ -134,7 +138,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(*ptr); /*Imprime le caractère actuel qui n'est pas '%'*/
-			count++; /*Incrémente le compteur*/
+			count++;
 		}
 	}
 	return (count);
