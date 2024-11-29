@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _printf - Print arguments according to a format.
  * @format: Format string containing the format specifiers.
@@ -7,26 +6,26 @@
  */
 int _printf(const char *format, ...)
 {
-	va_list args; /* Déclare une liste pour les arguments variadiques*/
-	int count = 0; /* Initialise le compteur de caractères imprimés à 0*/
-	const char *ptr; /* Déclare un pointeur pour parcourir la chaîne format*/
+	va_list args;
+	int count = 0;
+	const char *ptr;
 
-	va_start(args, format); /* Initialise la liste d'arguments variadiques*/
-	for (ptr = format; (*ptr != '\0'); ptr++)
+	va_start(args, format);
+	for (ptr = format; *ptr != '\0'; ptr++)
 	{
-		if (*ptr == '%') /* Vérifie si le caractère actuel est '%'*/
+		if (*ptr == '%')
 		{
-			ptr++; /*Passe au caractère suivant*/
-			if (*ptr == 'c') /* Vérifie si le spécificateur est 'c'*/
+			ptr++;
+			if (*ptr == 'c')
 			{
 				_putchar(va_arg(args, int));
-				count++; /*Incrémente le compteur*/
+				count++;
 			}
-			else if (*ptr == 's') /* Vérifie si le spécificateur est 's'*/
+			else if (*ptr == 's')
 			{
 				char *str = va_arg(args, char *);
 
-				while (*str) /* Parcourt chaque caractère de la chaîne*/
+				while (*str)
 				{
 					_putchar(*str);
 					str++;
@@ -35,14 +34,15 @@ int _printf(const char *format, ...)
 			}
 			else if (*ptr == '%')
 			{
-				_putchar('%'); /* Imprime le caractère '%'*/
+				_putchar('%');
+				count++;
 			}
 		}
 		else
 		{
-			_putchar(*ptr); /*Imprime le caractère actuel qui n'est pas '%'*/
+			_putchar(*ptr);
+			count++;
 		}
-		count++;
 	}
 	va_end(args);
 	return (count);
