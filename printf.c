@@ -19,8 +19,7 @@ int print_integer(va_list args)
 	if (num < 0)
 	{
 		_putchar('-');
-		num += 1;
-		num = num * -1;
+		num = -num;
 		resultat++;
 	}
 
