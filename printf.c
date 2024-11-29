@@ -107,7 +107,7 @@ int _printf(const char *format, ...)
 				count += print_integer(args);
 			else
 			{
-				count++;
+				count = count + 2;
 				_putchar('%');
 				_putchar(*ptr);
 			}
