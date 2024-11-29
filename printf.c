@@ -60,7 +60,19 @@ int print_char_ptr(va_list args)
 	}
 	return (resultat);
 }
+/**
+ * print_char - Print arguments according to a format.
+ * @args: argument
+ * Return: The number of characters printed (excluding null byte).
+ */
+int print_char(va_list args)
+{
+	int resultat = 0;
 
+	_putchar(va_arg(args, int));
+		resultat++;
+	return (resultat);
+}
 /**
  * _printf - Print arguments according to a format.
  * @format: format
@@ -83,19 +95,16 @@ int _printf(const char *format, ...)
 		{
 			ptr++; /*Passe au caractère suivant*/
 			if (*ptr == 'c')
-			{
-				_putchar(va_arg(args, int));
-				count++;
-			}
+				count += print_char(args);
 			else if (*ptr == '%') /*Vérifie si le spécificateur est '%'*/
 			{
 				_putchar('%'); /* Imprime le caractère '%'*/
 				count++;
 			}
 			else if (*ptr == 's')
-			count += print_char_ptr(args);
+				count += print_char_ptr(args);
 			else if (*ptr == 'i' || *ptr == 'd')
-			count += print_integer(args);
+				count += print_integer(args);
 			else
 			{
 				_putchar('%');
