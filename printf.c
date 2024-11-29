@@ -24,12 +24,11 @@ int _printf(const char *format, ...)
 			else if (*ptr == 's')
 			{
 				char *str = va_arg(args, char *);
-
+				count++;
 				while (*str)
 				{
 					_putchar(*str);
 					str++;
-					count++;
 				}
 			}
 			else if (*ptr == '%')
