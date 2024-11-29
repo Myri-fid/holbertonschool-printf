@@ -71,15 +71,27 @@ void print_double(va_list args)
  * @args: arguments
  * Return: The number of characters printed (excluding null byte).
  */
-void print_char_ptr(va_list args)
+int print_char_ptr(va_list args)
 {
 	char *str = va_arg(args, char *);
+
+	if (str == NULL)
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
+		return (6);
+	}
 
 	while (*str) /* Parcourt chaque caractère de la chaîne*/
 	{
 		_putchar(*str);
 		str++;
 	}
+	return (0);
 }
 
 /**
@@ -113,6 +125,11 @@ int _printf(const char *format, ...)
 				print_char_ptr(args);
 			else if (*ptr == 'i' || *ptr == 'd')
 				print_integer(args);
+			else
+			{
+				_putchar('%');
+				_putchar(*ptr);
+			}
 		}
 		else
 		{
