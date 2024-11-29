@@ -63,19 +63,18 @@ int _printf(const char *format, ...)
 		{
 			ptr++; /*Passe au caractère suivant*/
 			if (*ptr == 'c')
-			{
 				_putchar(va_arg(args, int));
-				count++; /*Incrémente le compteur*/
-			}
 			else if (*ptr == '%') /*Vérifie si le spécificateur est '%'*/
-			{
 				_putchar('%'); /* Imprime le caractère '%'*/
-				count++; /*Incrémente le compteur*/
-			}
 			else if (*ptr == 's')
 				print_char_ptr(args);
 			else if (*ptr == 'i' || *ptr == 'd')
 				print_integer(args);
+			else
+			{
+				_putchar('%');
+				_putchar(*ptr);
+			}
 		}
 		else
 		{
@@ -83,5 +82,6 @@ int _printf(const char *format, ...)
 			count++; /*Incrémente le compteur*/
 		}
 	}
+	va_end(args);
 	return (count);
 }
