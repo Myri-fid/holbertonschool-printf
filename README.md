@@ -66,6 +66,8 @@ int main(void)
 ```
 Hello, my name is Brian and I am 25 years old.
 ```
+### Data leak test 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1000&color=32E236&center=&vCenter=&repeat=&random=&width=500&height=62&lines=valgrind+.%2Fa.out)](https://git.io/typing-svg)
 
 ## Project Collaborators
 
@@ -76,6 +78,8 @@ Hello, my name is Brian and I am 25 years old.
 - Ahmed Hmeyd [@Ahmed](https://github.com/hmeyd)
 
 - David Tolza [@VidadTol](https://www.github.com/VidadTol)
+
+
 
 
 
