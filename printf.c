@@ -8,26 +8,37 @@
  */
 int print_integer(va_list args)
 {
-	int num, mul, resultat = 0;
+	int mul, resultat = 0;
+	long int num = 0;
+	
 
 	mul = 1;
 	num = va_arg(args, int);
+
+
 	if (num < 0)
 	{
 		_putchar('-');
-		resultat++;
-		num = -1 * num;
-	}
-	while (num / mul > 9)
-	{
-		mul = mul * 10;
-	}
-	while (mul >= 1)
-	{
-		_putchar ((num / mul) % 10 + '0');
-		mul = mul / 10;
+		num += 1;
+		num = num * -1;
 		resultat++;
 	}
+
+
+	while(num / mul > 9)
+	{
+		mul *= 10;
+	}
+
+	while(mul >= 1)
+	{
+		_putchar((num / mul) % 10 + '0');
+		mul /= 10;
+		resultat++;
+	
+	}
+
+
 	return (resultat);
 }
 
