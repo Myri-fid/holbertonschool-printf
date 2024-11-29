@@ -15,6 +15,7 @@ int print_integer(va_list args)
 	if (num < 0)
 	{
 		_putchar('-');
+		resultat++;
 		num = -1 * num;
 	}
 	while (num / mul > 9)
