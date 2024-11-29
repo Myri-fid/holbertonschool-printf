@@ -67,11 +67,8 @@ int print_char_ptr(va_list args)
  */
 int print_char(va_list args)
 {
-	int resultat = 0;
-
 	_putchar(va_arg(args, int));
-		resultat++;
-	return (resultat);
+	return (1);
 }
 /**
  * _printf - Print arguments according to a format.
@@ -118,5 +115,6 @@ int _printf(const char *format, ...)
 			count++;
 		}
 	}
+	va_end(args);
 	return (count);
 }
