@@ -62,6 +62,7 @@ int _printf(const char *format, ...)
 		if (*ptr == '%')
 		{
 			ptr++; /*Passe au caractère suivant*/
+			count++;
 			if (*ptr == 'c')
 				_putchar(va_arg(args, int));
 			else if (*ptr == '%') /*Vérifie si le spécificateur est '%'*/
