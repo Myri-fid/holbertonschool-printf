@@ -4,13 +4,14 @@
 .B _printf Custom formatted output converson function
 
 .SH SYNOPSIS
-.PP
-.B ##include "main.h"
+.nf
+.B ##include <stdio.h>
+.B ##include <stdarg.h>
 .TP
 .B int _printf(char *format, ...)
+.fi
 
 .SH DESCRIPTION
-.sp
 .PP
 .B _printf is a custom implementation of the standard printf function.
 Print output according to format.
@@ -46,10 +47,10 @@ A conversion specifier is a character that specifies the type of conversion to b
 
 .SH EXAMPLES
 .PP
-The following example demonstrates how to use  \fB_printf()\fP:
+.B The following example demonstrates how to use  \fB_printf()\fP:
 
 .nf
-.B #include <stdio.h>
+#include <stdio.h>
 
 int main(void) 
 {
