@@ -1,17 +1,18 @@
 .TH PRINTF 3 "28 Novembre 2024" "1.0" "printf man page"
 .SH NAME
 .PP
-.BI _printf
+.B _printf Custom formatted output converson function
 
 .SH SYNOPSIS
 .PP
-.B #include <stdio.h>
-.B #include <stdarg.h>
-.B int printf(char *format, ...)
+.B ##include "main.h"
+.TP
+.B int _printf(char *format, ...)
 
 .SH DESCRIPTION
 .sp
 .PP
+.B _printf is a custom implementation of the standard printf function.
 Print output according to format.
 
 Printf is a function that writes output to the stdout, which is the standard output stream.
@@ -19,14 +20,14 @@ Printf is a function that writes output to the stdout, which is the standard out
 Also, the function writes the output according to the format string. This format string specifies how the following arguments are converted for output.
 
 .B Return value
+.B _printf
+On success the function returns the number of characters printed (excluding the null byte used to terminate the output into strings)
 
-The function returns the number of characters printed for success. Note: It excludes the null byte used to end output to strings.
-
-The function returns a negative value if an output error occurs.
+if an output error occurs the function returns a negative value
 
 .B The conversion specifier
 
-A conversion specifier is a character that specifies the type of conversion to be used. It is used during input and output. It tells the compiler what type of data is in the varaible when printing using printf. 
+A conversion specifier is a character that specifies the type of conversion to be used. It is used during input and output. It tells the compiler what type of data is in the varaible when printing using _printf. 
 
 .B The following conversion specifiers are supported:
 
@@ -35,30 +36,27 @@ A conversion specifier is a character that specifies the type of conversion to b
 	Print a single character. 
 .TP 
 .B %s 
-	Print a string of characters. 
+	Prints a null-terminated string of characters. 
 .TP 
 .B %% 
 	Print a percent sign. 
 .TP 
-.B %d 
-	Print a decimal (base 10) number. .
-.TP 
-.B %i 
-	Print an integer in base 10.
+.B %i, %d
+	Prints a signed integer in base 10.
 
 .SH EXAMPLES
 .PP
 The following example demonstrates how to use  \fB_printf()\fP:
 
 .nf
-.B #include <stdio.h> 
+.B #include <stdio.h>
 
 int main(void) 
 {
         char name[] = "Brian";
         int age = 25; 
 
-        _printf("Hello, my name is %s and I am %d years old, and I'm not in the kitchen.\n", name, age);
+        _printf("Hello, my name is %s and I am %d years old, and I'm not always in the kitchen", name, age);
 
         return 0;
 }
@@ -66,7 +64,7 @@ int main(void)
 .B This will Output:
 .PP
 .nf
-Hello, my name is Brian and I am 25 years old, and I'm not in the kitchen.
+Hi, my name is Brian and I'm 25 years old, and I'm not always in the kitchen ;)
 
 .SH NOTES
 .PP
@@ -81,3 +79,4 @@ This \fB_printf()\fP function example and man page were created by [Myriam,Ahmed
 .SH COPYRIGHT
 .PP
 No copyright. This is free and unencumbered software released into the public domain.
+
