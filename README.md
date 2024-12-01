@@ -7,11 +7,11 @@
 
 
 ## Synopsis
-
-The printf function in the C programming language, prints output according to format. The print function is used to print the "character, string, integer, percent, and a reverse of a string" onto the output screen.
+The printf function in C programming language prints the output according to the format. The printf function is used to print "character, string, integer, percentage" on the output screen.
 
 ## Description
-The printf function produces output according a format that follows conversion specifiers. A conversion specifier is a character that specifies the type of conversion to be used. It is used during input and output.
+The printf function produces output according a format that follows conversion specifiers. 
+A conversion specifier is a character that specifies the type of conversion to be used. It is used during input and output.
 
 It tells the compiler what type of data is in the varaible when printing using printf. They are listed below.
 
@@ -57,7 +57,7 @@ int main(void)
         char name[] = "Brian";
         int age = 25; 
 
-        _printf("Hello, my name is %s and I am %d years old.\n", name, age);
+        _printf("Hello, my name is %s and I am %d years old", name, age);
 
         return 0; 
 }
@@ -66,7 +66,8 @@ int main(void)
 ```
 Hello, my name is Brian and I am 25 years old.
 ```
-### Data leak test 
+### You can test data leaks with the link below
+ 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1000&color=32E236&center=&vCenter=&repeat=&random=&width=500&height=62&lines=valgrind+.%2Fa.out)](https://git.io/typing-svg)
 
 ## Project Collaborators
@@ -78,3 +79,9 @@ Hello, my name is Brian and I am 25 years old.
 - Ahmed Hmeyd [@Ahmed](https://github.com/hmeyd)
 
 - David Tolza [@VidadTol](https://www.github.com/VidadTol)
+
+
+
+
+
+
